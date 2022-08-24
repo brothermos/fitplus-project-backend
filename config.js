@@ -1,4 +1,4 @@
-import "dotenv/config";
+require('dotenv').config()
 
 const config = {
     isVercel: process.env.IS_VERCEL || false,
@@ -8,7 +8,8 @@ const config = {
         username: process.env.MONGODB_USERNAME,
         password: process.env.MONGODB_PASSWORD,
         dbName: process.env.MONGODB_DATABASE,
+        
     },
 };
 
-export default config;
+module.exports = config;

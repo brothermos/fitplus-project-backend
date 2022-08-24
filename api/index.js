@@ -1,9 +1,9 @@
-import express from "express";
-import mongoose from "mongoose";
-import blogRouter from "./routes/blog-routes";
-import router from "./routes/user-routes";
-import cors from "cors";
-import config from "./config";
+const express = require("express");
+const mongoose = require("mongoose");
+const blogRouter = require("../routes/blog-routes");
+const router = require("../routes/user-routes");
+const cors = require("cors");
+const config = require("../config");
 
 const app = express();
 
@@ -24,3 +24,4 @@ app.use(express.json());
 app.use("/api/user", router);
 app.use("/api/blog", blogRouter);
 
+module.exports = app

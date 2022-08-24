@@ -1,11 +1,11 @@
-import express from "express";
-import mongoose from "mongoose";
-import config from "./config";
+const express = require("express");
+const mongoose = require("mongoose");
+const config = require("./config");
 
-const app = express();
+const app = require('./api/index.js')
 
-console.log("runnwing with follwing config");
-console.log(config);
+// console.log("runnwing with follwing config");
+// console.log(config);
 
 // middleware
 
